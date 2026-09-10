@@ -1,0 +1,157 @@
+@import "tailwindcss";
+:root {
+  color-scheme: dark;
+  --background: #101316;
+  --surface: #191e23;
+  --line: #343c44;
+  --text: #eff3f5;
+  --muted: #a7b2bd;
+  --accent: #a7d8f2;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+main {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 5vw;
+}
+header {
+  min-height: 104px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+.brand {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+.brand-mark {
+  margin-left: 9px;
+  color: var(--accent);
+}
+.company {
+  font-size: 0.875rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+.phase {
+  margin-left: auto;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  font-size: 0.875rem;
+}
+.workspace {
+  padding: 66px 0 64px;
+}
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.875rem;
+  letter-spacing: 0.13em;
+}
+h1 {
+  font-size: clamp(2.2rem, 4.5vw, 4.4rem);
+  line-height: 1.12;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  margin: 24px 0;
+}
+.intro {
+  color: var(--muted);
+  max-width: 610px;
+  font-size: 1.125rem;
+}
+.status {
+  margin: 40px 0;
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  padding: 24px 28px;
+}
+.status-label {
+  display: block;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.status strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.2rem;
+}
+.status p {
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+.boundaries {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+article {
+  padding: 24px 24px 10px 0;
+}
+article + article {
+  padding-left: 24px;
+  border-left: 1px solid var(--line);
+}
+.number {
+  color: var(--accent);
+  font-size: 0.875rem;
+}
+h2 {
+  font-size: 1.125rem;
+  margin: 16px 0 10px;
+}
+article p {
+  color: var(--muted);
+  max-width: 300px;
+}
+.tag {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+footer {
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 24px 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+@media (max-width: 700px) {
+  .company {
+    flex-basis: 65%;
+    font-size: 0.875rem;
+  }
+  .phase {
+    margin-left: 0;
+  }
+  .workspace {
+    padding-top: 34px;
+  }
+  .boundaries {
+    grid-template-columns: 1fr;
+  }
+  article + article {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+  }
+  footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
